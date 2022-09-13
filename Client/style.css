@@ -1,0 +1,145 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5256ad;
+}
+
+.Nav{
+    text-align: center;
+}
+
+*/
+
+
+
+*{
+    margin: auto;
+    overflow-x:hidden;
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+    padding:15px;
+    background-color: lightgreen;
+    text-align: center;
+    width: 100%;
+    height: 15pt;
+    margin-bottom: 1rem;
+}
+
+.back_img{
+    /* background-image: url("https://media.gettyimages.com/photos/colorful-sunset-picture-id1181315370?s=2048x2048"); */
+    /* background-color:darkcyan;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border: 1px solid black;
+    height: 34rem;
+    text-align: center; */
+    box-sizing: border-box;
+    border-radius: 12px;
+    width: 90%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5256ad;
+}
+
+.drag-area{
+  border: 2px dashed #fff;
+  height: 10vw;
+  width: 70%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area.active{
+  border: 2px solid #fff;
+}
+.drag-area .icon{
+  font-size: 100px;
+  color: #fff;
+}
+.drag-area header{
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.drag-area span{
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+.drag-area button{
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.res{
+    background-color: brown;
+    position:absolute;
+    top: 7vw;
+    display: none;
+}
+
+.motive{
+    background-color: black;
+    color:white;
+    margin: auto;
+    height: fit-content;
+    width:90%;
+    border-radius: 12px;
+}
+
+.footer{
+    display:flex;
+}
+.heading1{
+    flex:9;
+    text-align: center;
+}
+.ref{
+    flex:3;
+    text-align: center;
+}
+.contributor{
+    flex:3;
+    text-align: center;
+    background-color: yellow;
+}
+
+.info{
+    flex:3;
+    text-align: center;
+}
