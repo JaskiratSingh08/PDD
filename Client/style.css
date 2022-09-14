@@ -1,3 +1,4 @@
+/** @format */
 
 * {
   margin: auto;
@@ -8,37 +9,32 @@
   position: sticky;
   top: 0;
   padding: 15px;
-  background-color: lightgreen;
   text-align: center;
   width: 100%;
   height: 15pt;
   margin-bottom: 1rem;
-  display: flex;
-}
-
-.nav-heading{
-  flex: 9;
-}
-.nav-icon{
-  flex: 3;
+  font-size: 24px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
 }
 
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .back_img {
-  min-height: 45vw;
-  width: 90%;
-  border: 1px solid black;
+  min-height: 100vh;
+  width: 95%;
   text-align: center;
   box-sizing: border-box;
   border-radius: 12px;
   display: flex;
   justify-content: center;
-  background-image: url("https://media.gettyimages.com/photos/colorful-sunset-picture-id1181315370?s=2048x2048");
+  background-image: url("https://images.all-free-download.com/images/graphiclarge/barn_building_cloud_dark_farm_field_grass_night_597751.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -59,42 +55,30 @@ main {
   max-height: 45vh;
   min-height: 40vh;
   opacity: 0;
-  /* display: none; */
 }
 
-.res-btn{
-  background-color: inherit;
-  padding: 5px;
-  border: 1px solid gray;
-  outline: none;
-  border-radius: 8px;
-  margin: 10px auto;
+.res_btn {
+  margin-bottom: 0;
+}
+
+.res_btn > button {
+  margin-bottom: 0;
+  width: 40vh;
   height: 3rem;
+  font-size: 22px;
+  font-weight: 500;
+  color: #02f827;
+  border: none;
+  outline: none;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
   cursor: pointer;
-  opacity: 0;
-  font-size: large;
-  color: black;
-  transition: 2.0 ease;
 }
 
-.res-btn:hover{
-
-  border:1px solid darkgreen;
-  color: darkgreen;
+.res_btn > button:disabled {
+  cursor: not-allowed;
 }
 
-.images {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.image {
-  flex: 1;
-  max-width: 15rem;
-  max-height: 15rem;
-  margin: 10px;
-}
 .drag-area {
   height: auto;
   width: 90%;
@@ -106,7 +90,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
+  
   /* From https://css.glass */
   background: rgba(247, 247, 247, 0.36);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -132,6 +116,26 @@ main {
   cursor: pointer;
 }
 
+.disease_images {
+  text-align: left;
+  display: none;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.image {
+  flex: 1;
+  max-width: 15rem;
+  max-height: 15rem;
+  margin: 10px;
+}
+
+
+
 .details {
   background-color: white;
   color: black;
@@ -150,9 +154,16 @@ main {
   flex: 1;
   padding: 5px;
   box-sizing: border-box;
-  background-color: pink;
+  /* background-color: pink; */
   font-family: 'Merriweather', serif;
   font-weight:400;
+  font-size: 20px;
+}
+
+.loading {
+  width:48px;
+  height:48px;
+  /* display: none; */
 }
 
 .details_heading {
@@ -160,19 +171,10 @@ main {
   margin-bottom: 6%;
 }
 
-.float-nav{
-  position: absolute;
-  bottom: 2rem;
-  background-color: coral;
-  width: 50%;
-  opacity: 0;
-  text-align: center;
-  border-radius: 8px;
-}
-
+/* Footer */
 
 .footer{
-  border: 2px solid red;
+  border-top: 2px solid red;
   background-color: black;
 }
 
@@ -198,8 +200,9 @@ main {
 .footer-bar{
   display: flex;
   margin: 1vw;
+  color: white;
   /* border: 2px solid lightgreen; */
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
   gap: 1rem;
 }
 
@@ -213,4 +216,36 @@ main {
 .btn{
   flex: 1;
   text-align: center;
+  color: #fff;
+}
+
+/* animation */
+
+.res {
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0);
+    background-color: rgba(147, 147, 236, 0.75);
+    border-radius: 100%;
+  }
+  50% {
+    transform: scale(1.5);
+    background-color: rgba(147, 147, 236, 0.75);
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 149, 218, 0.75);
+  }
 }
