@@ -1,4 +1,3 @@
-/** @format */
 
 * {
   margin: auto;
@@ -14,6 +13,14 @@
   width: 100%;
   height: 15pt;
   margin-bottom: 1rem;
+  display: flex;
+}
+
+.nav-heading{
+  flex: 9;
+}
+.nav-icon{
+  flex: 3;
 }
 
 main {
@@ -23,7 +30,7 @@ main {
 }
 
 .back_img {
-  min-height: 100vh;
+  min-height: 45vw;
   width: 90%;
   border: 1px solid black;
   text-align: center;
@@ -31,7 +38,7 @@ main {
   border-radius: 12px;
   display: flex;
   justify-content: center;
-  background-image: url("https://images.all-free-download.com/images/graphiclarge/barn_building_cloud_dark_farm_field_grass_night_597751.jpg");
+  background-image: url("https://media.gettyimages.com/photos/colorful-sunset-picture-id1181315370?s=2048x2048");
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -47,11 +54,33 @@ main {
   width: 60%;
 }
 .res {
-  /* background-color: brown; */
+  background-color: brown;
   width: 90%;
   max-height: 45vh;
   min-height: 40vh;
   opacity: 0;
+  /* display: none; */
+}
+
+.res-btn{
+  background-color: inherit;
+  padding: 5px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 8px;
+  margin: 10px auto;
+  height: 3rem;
+  cursor: pointer;
+  opacity: 0;
+  font-size: large;
+  color: black;
+  transition: 2.0 ease;
+}
+
+.res-btn:hover{
+
+  border:1px solid darkgreen;
+  color: darkgreen;
 }
 
 .images {
@@ -104,14 +133,16 @@ main {
 }
 
 .details {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   margin: 2rem 0;
   height: fit-content;
   width: 90%;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  gap: 3rem;
 }
 
 .motive,
@@ -119,30 +150,67 @@ main {
   flex: 1;
   padding: 5px;
   box-sizing: border-box;
+  background-color: pink;
+  font-family: 'Merriweather', serif;
+  font-weight:400;
 }
 
-.motive_heading {
+.details_heading {
   text-align: center;
+  margin-bottom: 6%;
 }
 
-.footer {
+.float-nav{
+  position: absolute;
+  bottom: 2rem;
+  background-color: coral;
+  width: 50%;
+  opacity: 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+
+.footer{
+  border: 2px solid red;
+  background-color: black;
+}
+
+
+.footer-container{
+    /* display:grid;
+    grid-template-columns: auto auto auto auto; */
+    display: flex;
+
+}
+.contributor{
+    flex:3;
+    /* column-gap: 50px; */
+    text-align: center;
+    color: white;
+    /* background-color: yellow; */
+}
+
+.profiles{
+  display:inline-block;
+}
+
+.footer-bar{
   display: flex;
-}
-.heading1 {
-  flex: 9;
-  text-align: center;
-}
-.ref {
-  flex: 3;
-  text-align: center;
-}
-.contributor {
-  flex: 3;
-  text-align: center;
-  background-color: yellow;
+  margin: 1vw;
+  /* border: 2px solid lightgreen; */
+  background-color: #f7f7f7;
+  gap: 1rem;
 }
 
-.info {
-  flex: 3;
+.copyright{
+  flex: 8;
+  text-align: left;
+  padding-left: 10pt;
+  font-size: small;
+}
+
+.btn{
+  flex: 1;
   text-align: center;
 }

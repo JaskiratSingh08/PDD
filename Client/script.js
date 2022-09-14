@@ -51,6 +51,9 @@ function showFile(){
 
       const back_img = document.querySelector(".back_img")
       back_img.style.backgroundImage = `url(${fileURL})`
+
+      const showbtn = document.querySelector(".float-nav");
+      showbtn.style.opacity = "1";
     }
     fileReader.readAsDataURL(file);
   }else{
@@ -58,4 +61,12 @@ function showFile(){
     dropArea.classList.remove("active");
     dragText.textContent = "Drag & Drop to Upload File";
   }
+}
+
+
+function showResult(){
+  const result = document.querySelector(".res");
+  result.style.opacity="1";
+  result.style.marginBottom="10px";
+  console.log("working");
 }

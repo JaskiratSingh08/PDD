@@ -2,117 +2,150 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Plant Disease Detection</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="nav">
-      <h3>A Mechanism for Plant Disease Detection</h3>
-    </nav>
-    <!-- Main Body -->
-    <main class="main">
-      <div class="back_img">
-        <div class="ui_container">
-          <div class="res">
-            <h5>Result</h5>
-            <p>Here we gonna name of disease wrt reasons</p>
-          </div>
 
-          <div class="drag-area">
-            <header>Drag & Drop to Upload File OR</header>
-            <button>Browse File</button>
-            <input type="file" hidden />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,400&display=swap"
+    rel="stylesheet">
+  <title>Plant Disease Detection</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="nav">
+    <h3 class="nav-heading">A Mechanism for Plant Disease Detection</h3>
+    <span class="nav-icon"><i class="ai-paper"></i></span>
+  </nav>
+  <!-- Main Body -->
+  <main class="main">
+    <div class="back_img">
+      <div class="ui_container">
+        <div class="res">
+          <h5>Result</h5>
+          <p>Here we gonna name of disease wrt reasons</p>
         </div>
-      </div>
-      <h2>Some Images Related to same Disease</h2>
-      <div class="images">
-        <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
-        <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
-        <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
-      </div>
 
-      <h2 class="about_heading">About Project</h2>
-      <div class="details">
-        <div class="motive">
-            <h3 class="motive_heading">Why this project?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-              laborum ipsa vero cum magnam odit consectetur reiciendis iure
-              similique error esse sit omnis natus, doloribus maxime aliquam nulla,
-              assumenda ex?
-            </p>
-    
-            <ul>
-              <li>lorem</li>
-              <li>lorem</li>
-              <li>lorem</li>
-              <li>lorem</li>
-            </ul>
-          </div>
-          <div class="future">
-            <h3 class="motive_heading">Future Scope</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-              laborum ipsa vero cum magnam odit consectetur reiciendis iure
-              similique error esse sit omnis natus, doloribus maxime aliquam nulla,
-              assumenda ex?
-            </p>
-    
-            <ul>
-              <li>lorem</li>
-              <li>lorem</li>
-              <li>lorem</li>
-              <li>lorem</li>
-            </ul>
-          </div>
+        <div class="drag-area">
+          <header>Drag and Drop file here</header>
+          <button>Browse File</button>
+          <input type="file" hidden />
+        </div>
+        <button class="res-btn" onclick="showResult()">Analyse</button>
       </div>
-    </main>
+    </div>
+    <h2>Some Images Related to same Disease</h2>
+    <div class="images">
+      <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
+      <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
+      <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
+    </div>
 
-    <!-- Footer -->
+    <!-- <h2 class="about_heading">About Project</h2> -->
+    <div class="details">
+      <div class="motive">
+        <h3 class="details_heading">Why this project?</h3>
+        <p>
+          Agricultural productivity is something on which
+          economy highly depends. This is the one of the
+          reasons that disease detection in plants plays
+          an important role in agriculture field,
+          as having disease in plants are quite natural.
+        </p>
 
-    <footer class="footer">
-      <!-- <div class="heading1">
+        <ul>
+          <li><i class="ai-arrow-forward-thick-fill"></i>lorem</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>lorem</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>lorem</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>lorem</li>
+        </ul>
+      </div>
+      <div class="future">
+        <h3 class="details_heading">Future Scope</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+          laborum ipsa vero cum magnam odit consectetur reiciendis iure
+          similique error esse sit omnis natus, doloribus maxime aliquam nulla,
+          assumenda ex?
+        </p>
+        
+        <ul>
+          <li><i class="ai-arrow-forward-thick-fill"></i>lorem</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>lorem</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>lorem</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>lorem</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  
+  <div  class="float-nav">
+    <i class="ai-search"></i>
+  </div>
+  <!-- Footer -->
+
+  <footer class="footer">
+    <!-- <div class="heading1">
             <h3>Contributors</h3>
         </div>
         <div class="ref">
-          <h3>Links</h3>
+            <h3>Links</h3>
         </div> -->
+    <div class="footer-container">
 
       <div class="contributor">
         <ol>
-          <li>lorem</li>
-          <li>lorem</li>
-          <li>lorem</li>
+          <li>Developed By</li>
         </ol>
       </div>
       <div class="contributor">
         <ol>
-          <li>lorem</li>
-          <li>lorem</li>
-          <li>lorem</li>
+          <li>Jaskirat Singh</li>
+          <div class="profiles">
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
         </ol>
       </div>
       <div class="contributor">
         <ol>
-          <li>lorem</li>
-          <li>lorem</li>
-          <li>lorem</li>
+          <li>Jaskirat Singh</li>
+          <div class="profiles">
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
         </ol>
       </div>
-      <div class="info">
+      <div class="contributor">
         <ol>
-          <li>lorem</li>
-          <li>lorem</li>
-          <li>lorem</li>
+          <li>Jaskirat Singh</li>
+          <li>
+            <div class="profiles">
+              <i class="ai-github-fill"></i>
+              <i class="ai-github-fill"></i>
+              <i class="ai-github-fill"></i>
+            </div>
+          </li>
         </ol>
       </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+    </div>
+    <div class="footer-bar">
+      <h4 class="copyright">Copyright©2022</h4>
+      <h4 class="btn">button</h4>
+      <h4 class="btn">button</h4>
+      <h4 class="btn">button</h4>
+      <h4 class="btn">button</h4>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+</body>
+
 </html>
