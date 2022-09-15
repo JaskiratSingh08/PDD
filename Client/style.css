@@ -1,4 +1,6 @@
-/** @format */
+.no-opacity {
+  opacity: 0;
+}
 
 * {
   margin: auto;
@@ -23,11 +25,10 @@
 main {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
 .back_img {
-  min-height: 100vh;
+  min-height: 600px;
   width: 95%;
   text-align: center;
   box-sizing: border-box;
@@ -40,30 +41,29 @@ main {
   object-fit: cover;
 }
 .ui_container {
-  position: absolute;
-  bottom: 5px;
-  /* background-color: #f88d02; */
-  box-sizing: border-box;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
-  height: 25rem;
   width: 60%;
 }
 .res {
-  background-color: brown;
+  color: #fff;
   width: 90%;
   max-height: 45vh;
   min-height: 40vh;
-  opacity: 0;
-}
-
-.res_btn {
-  margin-bottom: 0;
+  margin: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.353);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.371);
+  overflow: auto;
+  text-align: center;
 }
 
 .res_btn > button {
-  margin-bottom: 0;
-  width: 40vh;
+  margin: 2rem 1rem;
+  margin-bottom: 1px;
   height: 3rem;
   font-size: 22px;
   font-weight: 500;
@@ -81,7 +81,7 @@ main {
 
 .drag-area {
   height: auto;
-  width: 90%;
+  min-width: 90%;
   bottom: 0;
   border: 2px dashed #fff;
   border-radius: 16px;
@@ -90,7 +90,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  
+
   /* From https://css.glass */
   background: rgba(247, 247, 247, 0.36);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -117,7 +117,6 @@ main {
 }
 
 .disease_images {
-  text-align: left;
   display: none;
 }
 
@@ -134,8 +133,6 @@ main {
   margin: 10px;
 }
 
-
-
 .details {
   background-color: white;
   color: black;
@@ -149,20 +146,26 @@ main {
   gap: 3rem;
 }
 
-.motive,
+@media only screen and (max-width: 700px) {
+  .details {
+    flex-direction: column;
+  }
+}
+
+.points_to_remember,
 .future {
   flex: 1;
   padding: 5px;
   box-sizing: border-box;
   /* background-color: pink; */
-  font-family: 'Merriweather', serif;
-  font-weight:400;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
   font-size: 20px;
 }
 
 .loading {
-  width:48px;
-  height:48px;
+  width: 48px;
+  height: 48px;
   /* display: none; */
 }
 
@@ -173,49 +176,42 @@ main {
 
 /* Footer */
 
-.footer{
+.footer {
   border-top: 2px solid red;
   background-color: black;
 }
 
-
-.footer-container{
-    /* display:grid;
-    grid-template-columns: auto auto auto auto; */
-    display: flex;
-
+.footer-container {
+  display: flex;
 }
-.contributor{
-    flex:3;
-    /* column-gap: 50px; */
-    text-align: center;
-    color: white;
-    /* background-color: yellow; */
+.contributor {
+  flex: 3;
+  text-align: center;
+  color: white;
 }
 
-.profiles{
-  display:inline-block;
+.profiles {
+  display: inline-block;
 }
 
-.footer-bar{
+.footer-bar {
   display: flex;
   margin: 1vw;
   color: white;
-  /* border: 2px solid lightgreen; */
-  /* background-color: #f7f7f7; */
   gap: 1rem;
+  justify-content: space-around;
 }
 
-.copyright{
-  flex: 8;
-  text-align: left;
+.copyright {
+  margin-left: 0;
   padding-left: 10pt;
   font-size: small;
 }
 
-.btn{
-  flex: 1;
-  text-align: center;
+.project_links {
+  margin-right: 0;
+}
+.btn {
   color: #fff;
 }
 
@@ -225,27 +221,23 @@ main {
   animation-name: visitedAnimation;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
-  animation-delay: 2s;
+  animation-delay: 0s;
   animation-direction: alternate;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-play-state: running;
 }
 
-
 @keyframes visitedAnimation {
   0% {
     transform: scale(0);
-    background-color: rgba(147, 147, 236, 0.75);
     border-radius: 100%;
   }
   50% {
     transform: scale(1.5);
-    background-color: rgba(147, 147, 236, 0.75);
     border-radius: 100%;
   }
   100% {
     transform: scale(1);
-    background-color: rgba(0, 149, 218, 0.75);
   }
 }

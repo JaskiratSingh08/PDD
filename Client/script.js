@@ -70,5 +70,9 @@ function tempShowResult(fileURL) {
   resBtn.disabled = false
   
   const res = document.querySelector('.res')
-  res.style.opacity = 1
+  console.log(res.className);
+  res.className=""
+  setTimeout(()=>{
+    res.className="res"
+  },1000)
 }
