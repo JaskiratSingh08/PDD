@@ -1,0 +1,115 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <link href="{{ url_for('static', filename='css/home.css') }}" rel='stylesheet' type='text/css' />
+
+    <title>Plant Disease Detection</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <h3>A Mechanism for Plant Disease Detection</h3>
+    </nav>
+    <!-- Main Body -->
+    <div style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+  
+
+
+  <form class="form-signin" method=post enctype=multipart/form-data>
+
+    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
+    <br>
+    <br>
+    <img id="output-image" class="rounded mx-auto d-block" />
+    <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold;">Predict</button>
+
+
+  </form>
+  </div>
+   <p style="color: black">{{ img }}</p>
+   <img src="" alt="jfsfs" id="img"/>
+   <p style="color: black">{{prediction}}</p>
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="contributor">
+        <ol>
+          <li>Developed By</li>
+        </ol>
+      </div>
+      <div class="contributor">
+        <ol>
+          <li>Tanuj Sharma</li>
+          <div class="profiles">
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+        </ol>
+      </div>
+      <div class="contributor">
+        <ol>
+          <li>Jaskirat Singh</li>
+          <div class="profiles">
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+        </ol>
+      </div>
+      <div class="contributor">
+        <ol>
+          <li>Jaskirat Singh</li>
+          <li>
+            <div class="profiles">
+              <i class="ai-github-fill"></i>
+              <i class="ai-github-fill"></i>
+              <i class="ai-github-fill"></i>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <h4 class="copyright">Copyright©2022</h4>
+      <div class="project_links">
+        
+        <a class="btn" href="#">button</a>
+        <a class="btn" href="#">button</a>
+        <a class="btn" href="#">button</a>
+        <a class="btn" href="#">button</a>
+      </div>
+    </div>
+  </footer>
+  <script type="text/JavaScript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script type="text/javascript">
+    function preview_image(event) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        var output = document.getElementById('output-image')
+        output.src = reader.result;
+        
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+  </body>
+</html>

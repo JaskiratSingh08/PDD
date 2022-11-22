@@ -1,0 +1,147 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <link href="{{ url_for('static', filename='css/home.css') }}" rel='stylesheet' type='text/css' />
+
+    <title>Plant Disease Detection</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <h3>A Mechanism for Plant Disease Detection</h3>
+    </nav>
+    <!-- Main Body -->
+    <main class="main">
+      <div class="back_img">
+        <div class="ui_container">
+          <div class="res no-opacity">
+            <h5>Result</h5>
+            <img  src="{{ url_for('static', filename='images/loading.svg') }}" alt="loading..." class="loading">
+            <p>Here we gonna name of disease wrt reasons</p>
+          </div>
+
+          <div class="drag-area">
+            <!-- <form class="form-signin" method=post enctype=multipart/form-data> -->
+              <header>Drag & Drop Here</header>
+              <button>Browse File</button>
+              <input type="file" hidden />
+              <!-- <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;"> -->
+            <!-- </form>  -->
+          </div>
+          <div class="res_btn">
+            <button disabled id="res-btn"> Analyze Disease</button>
+          </div>
+        </div>
+      </div>
+      <div class="disease_images">
+
+        <h2>Some Images Related to same Disease</h2>
+        <div class="images">
+          <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
+          <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
+          <img src="./images/plant1.jpeg" alt="sameDiseaseImg" class="image" />
+        </div>
+      </div>
+
+      <p>{{ img }}</p>
+      <p>{{ prediction }}</p>
+       <!-- <h2 class="about_heading">About Project</h2> -->
+    <div class="details">
+      <div class="points_to_remember">
+        <h3 class="details_heading">🪄Point's to Remember</h3>
+        <ul>
+          <li><i class="ai-arrow-forward-thick-fill"></i>All Plant's species are not allowed.</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>All Plant's species are not allowed.</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>All Plant's species are not allowed.</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>All Plant's species are not allowed.</li>
+        </ul>
+      </div>
+      <div class="future">
+        <h3 class="details_heading">🚩Future Scope</h3>
+        <ul>
+          <li><i class="ai-arrow-forward-thick-fill"></i>this is now 99.999% accurate soon we will reach 100% accuracy</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>Some crop spices are not added we are adding</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>Provide free doctor services soon</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>Add video for heathy farming</li>
+          <li><i class="ai-arrow-forward-thick-fill"></i>Soon available in playstore and apple store</li>
+        </ul>
+      </div>
+    </div>
+    </main>
+
+   
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="contributor">
+        <ol>
+          <li>Developed By</li>
+        </ol>
+      </div>
+      <div class="contributor">
+        <ol>
+          <li>Tanuj Sharma</li>
+          <div class="profiles">
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+        </ol>
+      </div>
+      <div class="contributor">
+        <ol>
+          <li>Jaskirat Singh</li>
+          <div class="profiles">
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+            <i class="ai-github-fill"></i>
+        </ol>
+      </div>
+      <div class="contributor">
+        <ol>
+          <li>Jaskirat Singh</li>
+          <li>
+            <div class="profiles">
+              <i class="ai-github-fill"></i>
+              <i class="ai-github-fill"></i>
+              <i class="ai-github-fill"></i>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <h4 class="copyright">Copyright©2022</h4>
+      <div class="project_links">
+        
+        <a class="btn" href="#">button</a>
+        <a class="btn" href="#">button</a>
+        <a class="btn" href="#">button</a>
+        <a class="btn" href="#">button</a>
+      </div>
+    </div>
+  </footer>
+  <script type="text/JavaScript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <!-- <script type="text/javascript">
+    function preview_image(event) {
+      var reader = new FileReader();
+      console.log("yes i  am called");
+      // reader.onload = function () {
+      //   var output = document.getElementById('output-image')
+      //   output.src = reader.result;
+      // }
+      console.log(event.target.files[0]);
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script> -->
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+  </body>
+</html>
