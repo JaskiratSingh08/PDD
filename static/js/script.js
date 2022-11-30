@@ -1,13 +1,13 @@
 //selecting all required elements
 const dropArea = document.querySelector('.drag-area'),
   dragText = dropArea.querySelector('header'),
-  button = dropArea.querySelector('button'),
+  // button = dropArea.querySelector('input'),
   input = dropArea.querySelector('input')
 let file //this is a global variable and we'll use it inside multiple functions
 
-button.onclick = () => {
-  input.click() //if user click on the button then the input also clicked
-}
+// button.onclick = () => {
+//   input.click() //if user click on the button then the input also clicked
+// }
 
 input.addEventListener('change', function () {
   //getting user select file and [0] this means if user select multiple files then we'll select only the first one
@@ -15,6 +15,12 @@ input.addEventListener('change', function () {
   dropArea.classList.add('active')
   showFile() //calling function
 })
+function imgHandler() {
+  //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+  file = this.files[0]
+  dropArea.classList.add('active')
+  showFile() //calling function
+}
 
 //If user Drag File Over DropArea
 dropArea.addEventListener('dragover', (event) => {

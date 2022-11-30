@@ -12,15 +12,8 @@ from utils.model import ResNet9
 app = Flask(__name__)
 
 
-disease_classes = ['Apple___Apple_scab',
-                   'Apple___Black_rot',
-                   'Apple___Cedar_apple_rust',
-                   'Apple___healthy',
-                   'Blueberry___healthy',
-                   'Cherry_(including_sour)___Powdery_mildew',
-                   'Cherry_(including_sour)___healthy',
-                   'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot',
-                   'Corn_(maize)___Common_rust_',
+disease_classes = ['Apple___Apple_scab','Apple___Black_rot','Apple___Cedar_apple_rust','Apple___healthy','Blueberry___healthy',
+                   'Cherry_(including_sour)___Powdery_mildew','Cherry_(including_sour)___healthy','Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot','Corn_(maize)___Common_rust_',
                    'Corn_(maize)___Northern_Leaf_Blight',
                    'Corn_(maize)___healthy',
                    'Grape___Black_rot',
@@ -58,13 +51,6 @@ disease_model.load_state_dict(torch.load(
 disease_model.eval()
 
 
-# Loading crop recommendation model
-
-# crop_recommendation_model_path = 'models/RandomForest.pkl'
-# crop_recommendation_model = pickle.load(
-#     open(crop_recommendation_model_path, 'rb'))
-
-
 # =========================================================================================
 
 # Custom functions for calculations
@@ -92,26 +78,20 @@ def predict_image(img, model=disease_model):
     return prediction
 # _________________________________________________________________________________________
 
-
-
-
-
-@app.route('/', methods=['POST','GET'])
+prediction = []
+@app.route('/', methods=['GET'])
 def disease_prediction():
-    title = 'PDD - Disease Detection'
+    title = 'Harvestify - Disease Detection'
 
-    # if request.method == 'POST':
-    if 'file' not in request.files:
-        return render_template('index.html', title=title)
     file = request.files.get('file')
-        # if not file:
-    #     return render_template('index.html', title=title)
+    if not file:
+        return render_template('index.html', title=title)
     try:
-        if file:
-            img = file.read()
-            prediction = predict_image(img)
-            prediction = Markup(str(disease_dic[prediction]))
-            return render_template('temp.html', prediction=prediction, img = file, title=title)
+        img = file.read()
+        prediction = predict_image(img)
+        prediction = Markup(str(disease_dic[prediction]))
+        print(type(prediction))
+        return render_template('temp.html', prediction=prediction, img = file, title=title)
     except:
         pass
     return render_template('index.html', title=title)
@@ -119,15 +99,7 @@ def disease_prediction():
 @app.route('/result')
 def result():
     title= 'Disease Result'
-    file = request.files.get('file')
-    print(file)
-    if file:
-        img = file.read()
-        prediction = predict_image(img)
-        prediction = Markup(str(disease_dic[prediction]))
-        print(prediction)
-        return render_template('temp.html', prediction = prediction, title=title)
-    return render_template('temp.html', prediction = "prediction", title=title)
+    return render_template('temp.html', prediction = prediction, title=title)
 
 if __name__ == '__main__':
     app.run(debug=True)

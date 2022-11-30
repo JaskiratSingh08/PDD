@@ -106,7 +106,7 @@
     font-weight: 500;
     color: black;
   }
-  .drag-area button {
+  .drag-area button,  .drag-area input {
     padding: 10px 25px;
     font-size: 20px;
     font-weight: 500;

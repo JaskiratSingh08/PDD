@@ -18,86 +18,20 @@
       <h3>A Mechanism for Plant Disease Detection</h3>
     </nav>
     <!-- Main Body -->
-    <div style="
-    width: 350px;
-    height: 50rem;
-    margin: 0px auto;
-    color: black;
-    border-radius: 25px;
-    padding: 10px 10px;
-    font-weight: bold;
-  ">
+    <div class="container py-2 mx-auto my-50 h-10 " style="margin: 9rem;">
+      <div class="row">
+          <div class="col-sm py-2 py-md-3">
+              <div class="card card-body" style="justify-content: center; background-color:blanchedalmond">
+                <p class="text-center" style="color: black; font-size: 22px;">{{ prediction }}</p>
+              </div>
+          </div>
+      </div>
+    </div>
 
   
 
 
-  <form class="form-signin" method=post enctype=multipart/form-data>
-
-    <h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
-    <input type="file" name="file" class="form-control-file" id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">
-    <br>
-    <br>
-    <img id="output-image" class="rounded mx-auto d-block" />
-    <button class="btn btn-lg btn-primary btn-block" type="submit" style="font-weight: bold;">Predict</button>
-
-
-  </form>
-  </div>
-   <p style="color: black">{{ img }}</p>
-   <img src="" alt="jfsfs" id="img"/>
-   <p style="color: black">{{prediction}}</p>
-  <!-- Footer -->
-
-  <footer class="footer">
-    <div class="footer-container">
-
-      <div class="contributor">
-        <ol>
-          <li>Developed By</li>
-        </ol>
-      </div>
-      <div class="contributor">
-        <ol>
-          <li>Tanuj Sharma</li>
-          <div class="profiles">
-            <i class="ai-github-fill"></i>
-            <i class="ai-github-fill"></i>
-            <i class="ai-github-fill"></i>
-        </ol>
-      </div>
-      <div class="contributor">
-        <ol>
-          <li>Jaskirat Singh</li>
-          <div class="profiles">
-            <i class="ai-github-fill"></i>
-            <i class="ai-github-fill"></i>
-            <i class="ai-github-fill"></i>
-        </ol>
-      </div>
-      <div class="contributor">
-        <ol>
-          <li>Jaskirat Singh</li>
-          <li>
-            <div class="profiles">
-              <i class="ai-github-fill"></i>
-              <i class="ai-github-fill"></i>
-              <i class="ai-github-fill"></i>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </div>
-    <div class="footer-bar">
-      <h4 class="copyright">Copyright©2022</h4>
-      <div class="project_links">
-        
-        <a class="btn" href="#">button</a>
-        <a class="btn" href="#">button</a>
-        <a class="btn" href="#">button</a>
-        <a class="btn" href="#">button</a>
-      </div>
-    </div>
-  </footer>
+  
   <script type="text/JavaScript" src="{{ url_for('static', filename='js/script.js') }}"></script>
   <script type="text/javascript">
     function preview_image(event) {
