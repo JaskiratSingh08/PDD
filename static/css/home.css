@@ -1,252 +1,344 @@
 .no-opacity {
-    opacity: 0;
-  }
-  
-  * {
-    margin: auto;
-    overflow-x: hidden;
-  }
-  
-  .nav {
-    position: sticky;
-    top: 0;
-    padding: 15px;
-    text-align: center;
-    width: 100%;
-    height: 15pt;
-    margin-bottom: 1rem;
-    font-size: 24px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.11);
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .back_img {
-    min-height: 600px;
-    width: 95%;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    background-image: url("https://images.all-free-download.com/images/graphiclarge/barn_building_cloud_dark_farm_field_grass_night_597751.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-  }
-  .ui_container {
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-  }
-  .res {
-    color: #fff;
-    width: 90%;
-    max-height: 45vh;
-    min-height: 40vh;
-    margin: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.353);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.371);
-    overflow: auto;
-    text-align: center;
-  }
-  
-  .res_btn > button {
-    margin: 2rem 1rem;
-    margin-bottom: 1px;
-    height: 3rem;
-    font-size: 22px;
-    font-weight: 500;
-    color: #02f827;
-    border: none;
-    outline: none;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    cursor: pointer;
-  }
-  
-  .res_btn > button:disabled {
-    cursor: not-allowed;
-  }
-  
-  .drag-area {
-    height: auto;
-    min-width: 90%;
-    bottom: 0;
-    border: 2px dashed #fff;
-    border-radius: 16px;
-    box-sizing: border-box;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  
-    /* From https://css.glass */
-    background: rgba(247, 247, 247, 0.36);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    overflow: hidden;
-  }
-  .drag-area.active {
-    border: 2px solid #fff;
-  }
-  .drag-area header {
-    font-size: 20px;
-    font-weight: 500;
-    color: black;
-  }
-  .drag-area button,  .drag-area input {
-    padding: 10px 25px;
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    border-radius: 20px;
-    color: #02f827;
-    cursor: pointer;
-  }
-  
-  .disease_images {
-    display: none;
-  }
-  
-  .images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .image {
-    flex: 1;
-    max-width: 15rem;
-    max-height: 15rem;
-    margin: 10px;
-  }
-  
+  opacity: 0;
+}
+
+* {
+  margin: auto;
+  overflow-x: hidden;
+  /* text-decoration: none; */
+}
+
+.nav {
+  position: sticky;
+  /* top: 0; */
+  padding: 15px;
+  /* text-align: center; */
+  width: 100%;
+  height: 1.75rem;
+  margin-bottom: 1rem;
+  font-size: 24px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+nav>.title {
+  margin: auto;
+  text-align: center;
+  /* font-size: inherit; */
+  font-family: 'Merriweather', serif;
+  margin-right: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.back_img {
+  min-height: 600px;
+  width: 95%;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://images.all-free-download.com/images/graphiclarge/barn_building_cloud_dark_farm_field_grass_night_597751.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.ui_container {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.res {
+  color: #fff;
+  width: 90%;
+  max-height: 45vh;
+  min-height: 40vh;
+  margin: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.353);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.371);
+  overflow: auto;
+  text-align: center;
+}
+
+.res_btn>button {
+  margin: 2rem 1rem;
+  margin-bottom: 10px;
+  height: 3rem;
+  font-size: 22px;
+  font-weight: 500;
+  color: #02f827;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.res_btn>button:disabled {
+  cursor: not-allowed;
+}
+
+.drag-area {
+  height: auto;
+  min-width: 80%;
+  bottom: 0;
+  border: 2px dashed #fff;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  /* From https://css.glass */
+  background: rgba(247, 247, 247, 0.36);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* overflow: hidden; */
+}
+
+.drag-area.active {
+  border: 2px solid #fff;
+}
+
+.drag-area header {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.drag-area button,
+.drag-area input {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  color: #02f827;
+  cursor: pointer;
+}
+
+.form-control-file {
+  width: 80%;
+  border-radius: 15px;
+}
+
+::-webkit-file-upload-button {
+  /* padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  color: #02f827;
+  cursor: pointer;  */
+
+  margin: 2rem 1rem;
+  margin-bottom: 10px;
+  height: 3rem;
+  font-size: 22px;
+  font-weight: 500;
+  color: #02f827;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+
+.disease_images {
+  display: none;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.image {
+  flex: 1;
+  max-width: 15rem;
+  max-height: 15rem;
+  margin: 10px;
+}
+
+.details {
+  background-color: white;
+  color: black;
+  /* margin: 2rem 0; */
+  font-family: 'Merriweather', serif;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  height: fit-content;
+  width: 90%;
+  text-align: center;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-around; */
+  /* gap: 3rem; */
+}
+
+.details>h3 {
+  font-size: x-large;
+  margin-bottom: 20px;
+}
+
+.details>ol>li {
+  margin-bottom: 15px;
+}
+
+
+@media only screen and (max-width: 700px) {
   .details {
-    background-color: white;
-    color: black;
-    margin: 2rem 0;
-    height: fit-content;
-    width: 90%;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 3rem;
+    flex-direction: column;
   }
-  
-  @media only screen and (max-width: 700px) {
-    .details {
-      flex-direction: column;
-    }
-  }
-  
-  .points_to_remember,
-  .future {
-    flex: 1;
-    padding: 5px;
-    box-sizing: border-box;
-    /* background-color: pink; */
-    font-family: "Merriweather", serif;
-    font-weight: 400;
-    font-size: 20px;
-  }
-  
-  .loading {
-    width: 48px;
-    height: 48px;
-    /* display: none; */
-  }
-  
-  .details_heading {
-    text-align: center;
-    margin-bottom: 6%;
-  }
-  
-  /* Footer */
-  
-  .footer {
-    border-top: 2px solid red;
-    background-color: black;
-  }
-  
+}
+
+.points_to_remember,
+.future {
+  flex: 1;
+  padding: 5px;
+  box-sizing: border-box;
+  /* background-color: pink; */
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.loading {
+  width: 48px;
+  height: 48px;
+  /* display: none; */
+}
+
+.details_heading {
+  text-align: center;
+  margin-bottom: 6%;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 2px solid red;
+  background-color: black;
+}
+
+.footer-container {
+  display: flex;
+}
+
+@media only screen and (max-width: 700px) {
   .footer-container {
-    display: flex;
+    flex-direction: column;
   }
-  .contributor {
-    flex: 3;
-    text-align: center;
-    color: white;
+  .contributor>.contis{
+    /* display: block;
+    position: sticky;
+    left: 2rem;
+    bottom: 0; */
+  margin-left: 30px;
   }
-  
-  .profiles {
-    display: inline-block;
-  }
-  
-  .footer-bar {
-    display: flex;
-    margin: 1vw;
-    color: white;
-    gap: 1rem;
-    justify-content: space-around;
-  }
-  
-  .copyright {
-    margin-left: 0;
-    padding-left: 10pt;
-    font-size: small;
-  }
-  
-  .project_links {
-    margin-right: 0;
-  }
-  .btn {
-    color: #fff;
-  }
-  
-  /* animation */
-  
-  .res {
-    animation-name: visitedAnimation;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-direction: alternate;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-  }
-  
-  @keyframes visitedAnimation {
-    0% {
-      transform: scale(0);
-      border-radius: 100%;
-    }
-    50% {
-      transform: scale(1.5);
-      border-radius: 100%;
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+
+}
+
+.contributor {
+  flex: 3;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.contributor>.conti {
+  margin-top: 15px;
+}
+
+.profiles {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* gap: 1rem; */
+  margin-top: 10px;
+}
+
+.profiles>a {
+  color: white;
+}
+
+.profiles>a>.icon {
+  font-size: x-large;
+  padding-right: 15px;
+}
 
 
 
-  /* for pop-up*/
+.footer-bar {
+  display: flex;
+  margin: 1vw;
+  color: white;
+  gap: 1rem;
+  justify-content: space-around;
+}
 
-    	/* *,
+.copyright {
+  margin-left: 0;
+  padding-left: 10pt;
+  font-size: small;
+}
+
+.project_links {
+  margin-right: 0;
+}
+
+.btn {
+  color: #fff;
+}
+
+/* animation */
+
+.res {
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0);
+    border-radius: 100%;
+  }
+
+  50% {
+    transform: scale(1.5);
+    border-radius: 100%;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* for pop-up*/
+
+/* *,
 *:before,
 *:after{
     padding: 0;
@@ -256,45 +348,68 @@
 body{
     background-color: #0855ae;
 } */
-.popup{
-    background-color: #ffffff;
-    width: 520px;
-    padding: 30px 30px 30px 30px;
-    /* padding-right: 30px; */
-    /* position: absolute; */
-    transform: translate(-50%,-50%);
-    left: 50%;
-    position: fixed;
-    top: 50%;
-    border-radius: 8px;
-    font-family: "Poppins",sans-serif;
-    display: none; 
-    text-align: center;
-    z-index: 999;
+.popup {
+  background-color: #ffffff;
+  width: 70vw;
+  /* min-width: 80%; */
+  padding: 30px 30px 30px 30px;
+  /* padding-right: 30px; */
+  /* position: absolute; */
+  transform: translate(-50%, -50%);
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  display: none;
+  text-align: center;
+  z-index: 999;
 }
-.popup #close{
-    display: block;
-    margin:  0 0 20px auto;
-    background-color: transparent;
-    font-size: 30px;
-    color: #ffffff;
-		background: #03549a;
-		border-radius: 100%;
-		width: 40px;
-		height: 40px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+
+/* @media screen and (max-width: 1024px){
+  
+
+  .popup{
+      width: 465px;
+  }
+
 }
-.popup h2{
-	margin-top: -20px;
+
+@media screen and (max-width: 720px){
+  
+
+  .popup{
+      width: 350px;
+  }
+
+} */
+
+.popup #close {
+  display: block;
+  margin: 0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #ffffff;
+  background: #03549a;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
-.popup p{
-    font-size: 14px;
-    text-align: justify;
-    margin: 20px 0;
-    line-height: 25px;
+
+.popup h2 {
+  margin-top: -20px;
 }
+
+.popup p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 25px;
+}
+
 /* a{
     display: block;
     width: 150px;
@@ -308,15 +423,11 @@ body{
     padding: 8px 0;
 }      */
 
-.popup>ul{
+.popup>ul {
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
 }
 
-.popup>ul>li{
-  padding:1rem;
-}
-
-a{
-  text-decoration: none;
+.popup>ul>li {
+  padding: 1rem;
 }

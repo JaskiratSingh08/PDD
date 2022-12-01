@@ -8,14 +8,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <link rel="stylesheet" href="style.css" /> -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300;1,400;1,700&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link href="{{ url_for('static', filename='css/home.css') }}" rel='stylesheet' type='text/css' />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
   <title>Plant Disease Detection</title>
 
   <style>
-    
+
   </style>
 
 </head>
@@ -68,7 +72,7 @@
 
     <!-- Navbar -->
     <nav class="nav">
-      <h3>A Mechanism for Plant Disease Detection</h3>
+      <h3 class="title">Plant Disease Detection System</h3>
     </nav>
     <!-- Main Body -->
     <main class="main">
@@ -106,7 +110,7 @@
       <p>{{ prediction }}</p> -->
       <!-- <h2 class="about_heading">About Project</h2> -->
       <div class="details">
-        <div class="points_to_remember">
+        <!-- <div class="points_to_remember">
           <h3 class="details_heading">🪄Point's to Remember</h3>
           <ul>
             <li><i class="ai-arrow-forward-thick-fill"></i>All Plant's species are not allowed.</li>
@@ -125,7 +129,14 @@
             <li><i class="ai-arrow-forward-thick-fill"></i>Add video for heathy farming</li>
             <li><i class="ai-arrow-forward-thick-fill"></i>Soon available in playstore and apple store</li>
           </ul>
-        </div>
+        </div> -->
+
+        <h3>Here we will try to answer the following questions:</h3>
+        <ol>
+          <li>1.) What disease is your crop affected by?</li>
+          <li>2.) What can be the possible reason of the disease?</li>
+          <li>3.) What are the prevention & cure methods to follow?</li>
+        </ol>
       </div>
     </main>
 
@@ -134,9 +145,11 @@
 
     <footer class="footer">
       <div class="footer-container">
-
         <div class="contributor">
-          <ol>
+          <h4 class="copyright conti contis">Copyright©2022</h4>
+        </div>
+        <div class="contributor">
+          <ol class="conti">
             <li>Developed By</li>
           </ol>
         </div>
@@ -144,43 +157,43 @@
           <ol>
             <li>Tanuj Sharma</li>
             <div class="profiles">
-              <a href="https://github.com/tanuj1811" target="__blank"><i class="ai-github-fill"></i></a></i>
-              <a href="https://linkedin.com/in/tanujsharma01" target="_blank"><i class="ai-linkedin-fill"></i></a>
-              <a href="https://tanuj1811.github.io/" target="_blank"><i class="ai-github-fill"></i></a>
+              <a href="https://github.com/tanuj1811" target="__blank"><i class="ai-github-fill icon"></i></a></i>
+              <a href="https://linkedin.com/in/tanujsharma01" target="_blank"><i class="ai-linkedin-fill icon"></i></a>
+              <a href="https://tanuj1811.github.io/" target="_blank"><i class="ai-link-out"></i></a>
           </ol>
         </div>
         <div class="contributor">
           <ol>
             <li>Jaskirat Singh</li>
             <div class="profiles">
-              <a href="https://github.com/jaskiratsingh08" target="_blank"><i class="ai-github-fill"></i></a>
-              <a href="https://linkedin.com/in/jaskirat0104"><i class="ai-linkedin-fill"></i></a>
-              <a href="https://jaskiratsingh.netlify.app/"><i class="ai-github-fill"></i></a>
+              <a href="https://github.com/jaskiratsingh08" target="_blank"><i class="ai-github-fill icon"></i></a>
+              <a href="https://www.linkedin.com/in/jaskirat-singh-627b9822b" target="_blank"><i
+                  class="ai-linkedin-fill icon"></i></a>
+              <a href="https://jaskiratsingh.netlify.app/" target="_blank"><i class="ai-link-out"></i></a>
           </ol>
         </div>
         <div class="contributor">
           <ol>
-            <li>Jaskirat Singh</li>
+            <li>Rohit Kumar</li>
             <li>
               <div class="profiles">
-                <i class="ai-github-fill"></i>
-                <i class="ai-github-fill"></i>
-                <i class="ai-github-fill"></i>
+                <a href="https://github.com/rohitk5252"><i class="ai-github-fill icon"></i></a>
+                <a href="https://www.linkedin.com/in/rohitk5252"><i class="ai-linkedin-fill icon"></i></a>
+                <!-- <i class="ai-github-fill icon"></i> -->
               </div>
             </li>
           </ol>
         </div>
       </div>
-      <div class="footer-bar">
-        <h4 class="copyright">Copyright©2022</h4>
-        <div class="project_links">
+      <!-- <div class="footer-bar"> -->
+      <!-- <div class="project_links">
 
           <a class="btn" href="#">button</a>
           <a class="btn" href="#">button</a>
           <a class="btn" href="#">button</a>
           <a class="btn" href="#">button</a>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
     </footer>
     <script type="text/JavaScript" src="{{ url_for('static', filename='js/script.js') }}"></script>
     <!-- <script type="text/javascript">
